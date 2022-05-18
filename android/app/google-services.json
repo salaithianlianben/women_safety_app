@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "223423425692",
+    "project_id": "safe-me-project",
+    "storage_bucket": "safe-me-project.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:223423425692:android:88d36d37e9d782840c1159",
+        "android_client_info": {
+          "package_name": "com.example.save_me_applicationn"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "223423425692-cbj3soapf0bakbotgv3stnnm67el5t0d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCN52kIkJeRfoeopy1UT8r7ctQ5yRbuQHU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "223423425692-cbj3soapf0bakbotgv3stnnm67el5t0d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
