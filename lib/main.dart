@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:firebase_core/firebase_core.dart';
 import '../constants/colors.dart';
+import 'screens/saveMeLoginScreen.dart';
 
 import '/screens/loginPage.dart';
 
-void main() {
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(const MyApp());
 }
 
@@ -21,7 +25,7 @@ class MyApp extends StatelessWidget {
         colorScheme:
             ThemeData().colorScheme.copyWith(primary:mainColor),
       ),
-      home: LoginPage(),
+      home: LoginScreen(),
     );
   }
 }
