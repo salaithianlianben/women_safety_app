@@ -1,20 +1,15 @@
-import 'dart:async';
-
 import 'package:flutter/material.dart';
-
+import 'dart:async';
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
-
   @override
   State<StatefulWidget> createState() {
     // TODO: implement createState
     return _SplashScreen();
   }
 }
-
 class _SplashScreen extends State<SplashScreen> {
   late double _logoLeftPosition;
-  late double _logoRightPosition;
   late Timer _timer1;
   late Timer _timer2;
   late Timer _timer3;
@@ -33,18 +28,17 @@ class _SplashScreen extends State<SplashScreen> {
   void initState() {
     super.initState();
     _logoLeftPosition = -1000;
-    _logoRightPosition = 1000;
     _timer1 = Timer(const Duration(seconds: 1), () {
       setState(() {
         _logoLeftPosition = 0;
       });
     });
-    _timer2 = Timer(const Duration(seconds: 6), () {
+    _timer2 = Timer(const Duration(seconds: 5), () {
       setState(() {
         _visible=!_visible;
       });
     });
-    _timer3 = Timer(const Duration(seconds: 8), () {
+    _timer3 = Timer(const Duration(seconds: 7), () {
       setState(() {
         _animationDone=true;
       });
