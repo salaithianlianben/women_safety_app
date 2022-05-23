@@ -1,9 +1,17 @@
 import 'package:flutter/material.dart';
-import '../constants/colors.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/services.dart';
+import 'package:save_me_applicationn/screens/home.dart';
+import 'package:save_me_applicationn/screens/otpScreen.dart';
+import 'package:save_me_applicationn/screens/splashScreen.dart';
+import '../constants/constants.dart';
+import 'screens/saveMeLoginScreen.dart';
 
 import '/screens/loginPage.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(const MyApp());
 }
 
@@ -18,10 +26,14 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData().copyWith(
         scaffoldBackgroundColor: Colors.white,
-        colorScheme:
-            ThemeData().colorScheme.copyWith(primary:mainColor),
+        colorScheme: ThemeData().colorScheme.copyWith(primary: mainColor),
       ),
-      home: LoginPage(),
+      // initialRoute: LoginScreen.id,
+      // routes: {
+      //   OtpScreen.id:(context)=>OtpScreen()
+      // },
+      // home: OtpScreen(phone: '8347161216',codeDigits: '+91',),
+      home: HomePage(key: GlobalKey()),
     );
   }
 }
